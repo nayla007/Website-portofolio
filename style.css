@@ -1,0 +1,424 @@
+    body {
+       font-family: Arial, sans-serif;
+       background-color: black;
+       color: aliceblue;
+   }
+
+   #about img {
+       width: 100%;
+       max-width: 300px;
+   }
+
+   #projects .card {
+       margin-bottom: 20px;
+   }
+
+   /* Gaya untuk Footer */
+    footer {
+        background-color: #222; /* Warna latar belakang footer yang lebih gelap */
+        color: #fff; /* Warna teks footer */
+        padding: 10px; /* Jarak dalam footer */
+        position: relative; /* Agar posisi footer tidak mengganggu layout */
+    }
+
+    /* Neon Navbar Styles */
+
+.nav-link {
+    color: #00ff00; /* Neon green color */
+    position: relative;
+    font-family: "VT323", monospace;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    color: #00cc00; /* Slightly lighter green on hover */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #00ff00; /* Neon underline color */
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-brand {
+    color: #00ff00; /* Warna teks neon hijau */
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00cc00; /* Efek glow pada teks */
+    animation: neon 1.5s ease-in-out infinite; /* Menambahkan animasi berkelip */
+    font-family: "Press Start 2P", system-ui;
+    font-size: 18px;
+    
+}
+
+.navbar-brand:hover {
+    color: #00cc00; /* Slightly lighter on hover */
+}
+
+.sticky .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.sticky .nav-link {
+    color: #00ff00; /* Neon green color */
+}
+
+.sticky .navbar-brand {
+    color: #00ff00; /* Neon green for brand */
+}
+
+/* Optionally, you can also add hover effects */
+.sticky .nav-link:hover {
+    color: #00cc00; /* Slightly lighter on hover */
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other elements */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Optional smooth transitions */
+    background-color: rgba(0, 0, 0, 0.9); /* Change background on scroll */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+}
+
+.sticky .neon-line {
+    background-color:#00cc00; /* Neon green */
+    height: 5px; /* Adjust height as needed */    
+    box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00cc00;
+    animation: glow 1.5s infinite alternate;
+    animation: neon 1.5s ease-in-out infinite; /* Menambahkan animasi berkelip */
+    position: relative; /* Agar bisa diposisikan relatif */
+    z-index: 1; /* Pastikan garis di atas elemen lain */
+}
+
+
+   .neon-line {
+    background-color:#00cc00; /* Neon green */
+    height: 5px; /* Adjust height as needed */    
+    box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00cc00;
+    animation: glow 1.5s infinite alternate;
+    animation: neon 1.5s ease-in-out infinite; /* Menambahkan animasi berkelip */
+    position: relative; /* Agar bisa diposisikan relatif */
+    z-index: 1; /* Pastikan garis di atas elemen lain */
+}
+
+    .carousel-item {
+        position: relative;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        top: 40%; /* Posisikan di tengah vertikal */
+        left: 50%; /* Posisikan di tengah horizontal */
+        transform: translate(-50%, -50%); /* Pindahkan ke tengah berdasarkan lebar dan tinggi */
+        text-align: center; /* Pusatkan teks */
+        color: white; /* Ganti warna teks sesuai kebutuhan */
+        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00cc00; /* Efek glow pada teks */
+        animation: fadeIn 1s forwards; /* Menambahkan animasi */
+    }
+
+    .carousel-caption h2 {
+        color: #00ff00; /* Warna teks neon hijau */
+        font-size: 45px; /* Ukuran font lebih besar */
+        margin-bottom: 10px;
+        font-family: "Bungee Shade", sans-serif;
+    }
+    
+    .carousel-caption p {
+        color: #ffffff; /* White text */
+    text-shadow: 0 0 3px #00ff00; /* Slight glow effect */
+        font-size: 30px; /* Ukuran font deskripsi */
+        font-family: "VT323", monospace;
+    }
+
+    .carousel-caption h2,
+    .carousel-caption p {
+        animation: neon 1.5s ease-in-out infinite; /* Menambahkan animasi berkelip */
+    }
+
+    /* Gaya untuk gambar profil */
+    .carousel-caption img {
+        width: 150px; /* Ukuran gambar profil */
+        height: 150px; /* Ukuran gambar profil */
+        border: 3px solid #00ff00; /* Border hijau neon */
+        box-shadow: 0 0 10px #00ff00, 0 0 20px #00cc00; /* Efek glow pada gambar */
+        margin-bottom: 20px; /* Jarak antara gambar dan teks */
+        object-fit: cover; /* Memastikan gambar tidak gepeng */
+    border-radius: 50%; /* Pastikan gambar berbentuk lingkaran */
+
+    }
+
+    
+
+    .carousel-control-prev-icon::before,
+    .carousel-control-next-icon::before {
+        color: #00cc00; /* Warna panah kontrol */
+    }
+
+/* Tambahan: Menambahkan animasi slide */
+    .carousel-item {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    #home {
+        padding-bottom: 0; /* Kurangi padding bawah jika ada */
+    }
+
+    /* Gaya untuk Section About */
+#about {
+    background-color: rgba(20, 20, 20, 0.705); /* Latar belakang hitam untuk kontras */
+    padding: 50px 0; /* Jarak atas dan bawah */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 0 20px rgba(0, 204, 0, 0.5); /* Efek bayangan */
+    animation: neon 1.5s ease-in-out infinite; /* Menambahkan animasi berkelip */
+    margin-top: -50px; /* Ubah nilainya sesuai kebutuhan */
+    width: 1150px;
+}
+
+.about-container {
+    display: flex; /* Flexbox for better alignment */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.about-img {
+    flex: 1; /* Allow image to grow */
+    max-width: 300px; /* Limit width */
+    margin: 0 20px; /* Spacing around image */
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Glow effect */
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.about-img:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+.about-text {
+    flex: 2; /* Allow text to take more space */
+    color: #fff; /* White text for contrast */
+}
+
+/* Gaya untuk teks neon */
+.neon-text {
+    color: #00ff00; /* Warna teks neon hijau */
+    font-size: 2rem; /* Ukuran font besar */
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00cc00; /* Efek glow pada teks */
+    margin-bottom: 20px; /* Jarak bawah */
+    font-family: "Audiowide", sans-serif;
+}
+
+.col-md-8 h2{
+    font-family: "Orbitron", sans-serif;
+}
+
+.col-md-8 p{
+    font-size: 26px;
+}
+
+/* Efek glow pada gambar profil */
+.glow-effect {
+    width: 150px; /* Ukuran gambar */
+    height: 150px; /* Ukuran gambar */
+    border: 3px solid #00ff00; /* Border hijau neon */
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00cc00; /* Efek glow pada gambar */
+    margin-bottom: 20px; /* Jarak antara gambar dan teks */
+    animation: neon 1.5s ease-in-out infinite; /* Menambahkan animasi berkelip */
+    margin-top: 10px;
+}
+
+    /* Style for the Projects section */
+#projects {
+    background-color: rgba(20, 20, 20, 0.8); /* Dark background for contrast */
+    padding: 50px 0; /* Padding above and below */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Neon green shadow */
+    width: 1150px;
+    margin-top: 70px;
+    animation: neon 1.5s ease-in-out infinite; /* Menambahkan animasi berkelip */
+}
+
+/* Card Styles */
+.card {
+    border: none; /* Remove default border */
+    background-color: rgba(30, 30, 30, 0.9); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    overflow: hidden; /* Crop overflow */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7); /* Glow effect on hover */
+}
+
+/* Card image style */
+.card-img-top {
+    height: 220px; /* Set a fixed height */
+    object-fit: cover; /* Cover the entire area */
+    transition: transform 0.3s;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+/* Card title style */
+.card-title {
+    color: #00ff00; /* Neon green text color */
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; /* Neon glow */
+    font-family: "Orbitron", sans-serif;
+}
+
+/* Card text style */
+.card-text {
+    color: #ffffff; /* White text */
+    text-shadow: 0 0 3px #00ff00; /* Slight glow effect */
+    font-family: "VT323", monospace;
+    font-size: 20px;
+}
+
+/* Skills Section Styles */
+#skills {
+    background-color: rgba(20, 20, 20, 0.9); /* Dark background */
+    padding: 50px 0; /* Padding above and below */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7); /* Neon green shadow */
+    width: 1150px;
+    margin-top: 70px;
+    animation: neon 1.5s ease-in-out infinite; /* Menambahkan animasi berkelip */
+}
+
+h2.neon-text {
+    color: #00ff00; /* Neon green color */
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; /* Neon glow effect */
+    font-size: 40px;
+}
+
+.skill-card {
+    background-color: rgba(30, 30, 30, 0.8); /* Slightly transparent background */
+    padding: 20px; /* Padding inside the card */
+    margin: 15px; /* Margin around the card */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Initial glow effect */
+}
+
+.skill-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1); /* Enhanced glow effect on hover */
+}
+
+.skill-title {
+    color: #00ff00; /* Neon green text color */
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; /* Neon glow */
+    font-size: 25px; /* Font size */
+    font-family: "Silkscreen", sans-serif;
+}
+
+/* Skill Icon Styles */
+.skill-icon {
+    width: 50px; /* Set a fixed width for the icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Spacing below the icon */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.1); /* Scale up the icon on hover */
+}
+
+
+
+#contact {
+    background-color: #1a1a1a; /* Dark background */
+    padding: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    animation: neon 1.5s ease-in-out infinite; /* Menambahkan animasi berkelip */
+}
+
+.neon-text {
+    color: #00ff00; /* Neon green */
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    font-size: 36px;
+}
+
+.neon-title {
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    margin-bottom: 15px;
+    font-family: "Audiowide", sans-serif;
+}
+
+.neon-link {
+    color: #00ff00;
+    transition: color 0.3s;
+    font-family: "VT323", monospace;
+    font-size: 20px;
+}
+
+.neon-link:hover {
+    color: #fff; /* Change to white on hover */
+    text-shadow: 0 0 15px #00ff00;
+}
+
+.social-media-icons {
+    margin-top: 20px;
+}
+
+.neon-icon {
+    width: 40px;
+    transition: transform 0.2s;
+}
+
+.neon-icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px #00ff00);
+}
+
+
+
+    /* Animasi fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%); /* Mulai sedikit lebih tinggi */
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%); /* Pindah ke posisi tengah */
+    }
+}
+
+@keyframes neon {
+    0%, 100% {
+        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00cc00; /* Glow normal */
+        opacity: 1; /* Teks terlihat */
+    }
+    50% {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00cc00; /* Glow lebih kuat */
+        opacity: 0.8; /* Teks sedikit memudar */
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00cc00;
+    }
+    100% {
+        box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00cc00;
+    }
+}
